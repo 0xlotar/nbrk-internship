@@ -39,8 +39,8 @@ telet()
 time.sleep(1)
 clear()
 
-if os.path.isfile('erfan4lx_log.txt'):
-    with open('erfan4lx_log.txt', 'r') as r:
+if os.path.isfile('zxtoska_log.txt'):
+    with open('zxtoska_log.txt', 'r') as r:
         data = r.readlines()
     api_id = data[0]
     api_hash = data[1]
@@ -48,7 +48,7 @@ if os.path.isfile('erfan4lx_log.txt'):
 else:
     api_id = input('Enter api_id: ')
     api_hash = input('Enter api_hash: ')
-    with open('erfan4lx_log.txt', 'w') as a:
+    with open('zxtoska_log.txt', 'w') as a:
         a.write(api_id + '\n' + api_hash)
 
 client = TelegramClient('zxtoska', api_id, api_hash)
@@ -116,7 +116,7 @@ async def main():
         except ValueError:
             continue
     
-    with open('erfan4lx_members.txt', 'w') as w:
+    with open('zxtoska_members.txt', 'w') as w:
         json.dump(mem_details, w)
     time.sleep(1)
     print(ye+'Please wait.....')
